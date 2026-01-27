@@ -3,7 +3,7 @@ import { UserResponse } from "@/lib/type/user";
 
 export default async function UserPage() {
   const BASE_URL = process.env.NEXT_PUBLIC_API;
-  const response = await fetch(`${BASE_URL}/api/v1/users`);
+   const response = await fetch(`${BASE_URL}/api/v1/users?limit=54&offset=0`);
   const users: UserResponse[] = await response.json();
   return (
     <main className="container mx-auto">
