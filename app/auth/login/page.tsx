@@ -1,5 +1,0 @@
-export defaultfunction LoginPage(){
-    return(
-        
-    )
-}

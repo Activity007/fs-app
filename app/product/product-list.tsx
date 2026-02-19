@@ -1,6 +1,7 @@
 import { CardImage, ProductCard } from "@/components/cards/product";
 import { ProductResponse } from "@/lib/type/product";
 import { UserResponse } from "@/lib/type/user";
+import Link from "next/link";
 
 const BASE_URL = process.env.NEXT_PUBLIC_API;
 
@@ -19,13 +20,15 @@ export default async function ProductList() {
     <main className="container mx-auto">
       <section className="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-6 gap-4 m-2">
         {products.map((product, index) => (
-          <CardImage
-            key={index}
-            images={product.images}
-            title={product.title}
-            description={product.description}
-            price={100}
-          />
+          <Link key={index} href={`/product/${product.id}`}>
+            <CardImage
+              key={index}
+              images={product.images}
+              title={product.title}
+              description={product.description}
+              price={product.price}
+            />
+          </Link>
         ))}
       </section>
     </main>

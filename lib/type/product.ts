@@ -1,14 +1,13 @@
-
 export type ProductResponse = {
-    id: number;
-    title: string;
-    slug: string;
-    price: number;
-    description: string;
-    category: Category;
-    image: [""];
-}
+  id: number;
+  title: string;
+  slug: string;
+  price: number;
+  description: string;
+  category: Category;
+  images: [""];
+};
 export type Category = {
-    id: number; 
-    name: string;
-}
+  id: number;
+  name: string;
+};
